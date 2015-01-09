@@ -29,9 +29,10 @@
     //fight function
     function fight(){
         console.log("in the fight function");
+        alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
 
         for(var i=0; i<10; i++){
-          //code will go here
+          console.log(i);
         };
     };
 
