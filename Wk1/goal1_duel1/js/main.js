@@ -32,7 +32,15 @@
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
 
         for(var i=0; i<10; i++){
-          console.log(i);
+          //Math.floor(Math.random() * (max - min) + min);
+
+          var minDamage1 = playerOneDamage * .5;
+          var minDamage2 = playerTwoDamage * .5;
+          var f1 = Math.floor(Math.random() * (playerOneDamage - minDamage1) + minDamage1);
+          var f2 = Math.floor(Math.random() * (playerTwoDamage - minDamage2) + minDamage2);
+
+          console.log(f1);
+          console.lgo(f2);
         };
     };
 
