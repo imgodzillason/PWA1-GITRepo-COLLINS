@@ -40,7 +40,7 @@
           var f2 = Math.floor(Math.random() * (playerTwoDamage - minDamage2) + minDamage2);
 
           console.log(f1);
-          console.lgo(f2);
+          console.log(f2);
         };
     };
 
