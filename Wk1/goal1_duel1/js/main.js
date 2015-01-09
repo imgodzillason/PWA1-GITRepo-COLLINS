@@ -29,7 +29,10 @@
     //fight function
     function fight(){
         console.log("in the fight function");
-        winnerCheck()
+
+        for(var i=0; i<10; i++){
+          //code will go here
+        };
     };
 
     //check for winner
