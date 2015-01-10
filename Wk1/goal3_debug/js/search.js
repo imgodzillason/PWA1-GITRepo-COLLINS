@@ -73,49 +73,50 @@
 	}; //close if statement
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-	var noMatch = function(){
-		var html = ''+
-			'<p>No Results found.</p>'+
-			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
+	var noMatch = function(){ //noMatch variable is equal to anonymous function
+		var html = ''+ //html variable is equal to query plus
+			'<p>No Results found.</p>'+ //show text
+			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>' //show text
 		;
-		resultsDIV.innerHTML = html;
+		resultsDIV.innerHTML = html; //return html content of element html
 	};
 	
 	// Put matches into page as paragraphs with anchors
-	var showMatches = function(results){
+	var showMatches = function(results){ //showMatches variable is equal to results function
 		
 		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>', 
-			title, 
-			url
+		var html = '<p>Results</p>', //display results text
+			title, //display title
+			url //display url
 		;
 		
 		// loop through all the results search() function
-		for(var i=0, j=results.length; i<j; i++){
+		for(var i=0, j=results.length; i<j; i++){ //while the length of the results is greater than i, continue loop
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			titleEnd = results[i].indexOf('|'); //titleEnd variable equal to the position of the first occurrence within variable results
+			title = results[i].subString(0, titleEnd); //title variable equals the characters extracted from the...
+			// results array between 0 and the length of titleEnd
 			
 			// pull the video url after the title
-			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+			url = results[i].substring(results[i].indexOf('|')+1, results[i].length); //obtain url from results array
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
-			html += '<p><a href=' + url + '>' + title + '</a></p>';
+			html += '<p><a href=' + url + '>' + title + '</a></p>'; //provide link for video
 		};
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
-		var query = searchInput.value;
-		validqte(query);
+	document.forms[0].onsubmit = function(){ //execute document.form when form is submitted
+		var query = searchInput.value; //query variable is equal to the value returned for searchInput
+		validqte(query); //run validate query function
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
-		return false;
+		return false; //return false
 	;
 
-})();
+})(); //run script
