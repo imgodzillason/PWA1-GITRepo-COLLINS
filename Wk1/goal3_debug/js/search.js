@@ -106,7 +106,7 @@
 			html += '<p><a href=' + url + '>' + title + '</a></p>'; //provide link for video
 		};
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-	};
+	}; //end function process
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
