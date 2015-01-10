@@ -1,6 +1,7 @@
 /*
-	PWA1 Goal 3
-	JavaScript Debugging & Scope
+	Jacob Collins
+	1/11/14
+	Week 1 - Analyze Buggy Search
 */
 
 
