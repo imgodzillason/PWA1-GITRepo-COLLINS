@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="661ea651-50bc-4705-9bac-0104be34497a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/search.js" afterPath="$PROJECT_DIR$/js/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Wk1/goal3_debug/js/search.js" afterPath="$PROJECT_DIR$/../../Wk1/goal3_debug/js/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Wk1/goal3_debug/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../../Wk1/goal3_debug/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Wk1/goal3_debug/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Wk1/goal3_debug/.idea/workspace.xml" />
     </list>
     <ignored path="goal3_debug.iws" />
     <ignored path=".idea/workspace.xml" />
