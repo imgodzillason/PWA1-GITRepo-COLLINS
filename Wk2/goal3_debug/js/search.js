@@ -9,7 +9,7 @@
 	
 	// Validates search query
 	var validate = function(query){ //set validation variable equal to query function //edit: error fixed, changed == to =; updated var name
-		
+
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) == " "){ //while character query is at 0, create blank space //edit: error fixed, changed = to ==
 			query = query.substring(1, query.length); //query equal to length of query as long as it's between 1 and length of query
@@ -17,17 +17,17 @@
 		while(query.charAt(query.length-1) === "") { //while returning characters equal to length of query characters minus 1
 			query = query.substring(0, query.length - 1); //query is equal to length of query between 0 and query length minus 1
 		} //edit: error fixed, removed semi-colon
-		
+
 		// Check search length, must have 3 characters
 		if(query.length < 3){ //if the query length is less than 3
 			//notify user that query is too small and to try to search again
 			alert("Your search query is too small, try again."); //edit: error fixed, added end quotation
-			
+
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus(); //give focus to searchInput variable
 			return;
 		} //close if loop //edit: fixed error, removed semi-colon
-		
+
 		search(query); //search value of query
 	};
 	
@@ -69,7 +69,7 @@
 			noMatch(); //run noMatch function
 		}else{
 			showMatches(results); //otherwise run showMatches function for variable results
-		} //close else statement //edit: error fixed, removed semi-colon
+		} //close else statement //edit: error fixed, removed semi-colon, fixed end curly brace
 	}; //close if statement
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
@@ -104,7 +104,7 @@
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>'; //provide link for video
-		} //edit: error fixed, removed semi-colon
+		} //edit: error fixed, removed semi-colon, added end curly brace
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	}; //end function process
 	
@@ -112,7 +112,7 @@
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function() { //execute document.form when form is submitted
 		var query = searchInput.value; //query variable is equal to the value returned for searchInput
-		validqte(query); //run validate query function
+		validate(query); //run validate query function //edit: error fixed, fixed variable name validqte to validate
 
 		// return false is needed for most events - this will be reviewed in upcoming course material
 		// THE LINE DIRECTLY BELOW IS CORRECT
