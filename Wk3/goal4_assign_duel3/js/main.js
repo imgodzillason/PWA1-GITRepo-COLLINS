@@ -26,9 +26,16 @@
 */
     //array for player stats
 
-    var playerStats1 = ["Wolverine", 20, 100];  //array for player 1 stats (name, damage, health)
+    //var playerStats1 = ["Wolverine", 20, 100];  //array for player 1 stats (name, damage, health)
 
-    var playerStats2 = ["Deadpool", 20, 100];  //array for player 2 stats (name, damage, health)
+    //var playerStats2 = ["Deadpool", 20, 100];  //array for player 2 stats (name, damage, health)
+
+    //fighter information
+    var players = [
+        playerOne = {name: "Deadpool", damage: 20, health: 100}
+        playerTwo = {name: "Wolverine", damage: 20, health: 100}
+    ];
+
 
 
     //round starting point

@@ -73,7 +73,7 @@
 		results.sort(); //sort elements of array
 
 		// Check that matches were found, and run output functions
-		if(results.length = 0){ //if the results length is equal to 0
+		if(results.length === 0){ //if the results length is equal to 0 //edit: error fixed, changed = to ===
 			noMatch(); //run noMatch function
 		}else{
 			showMatches(results); //otherwise run showMatches function for variable results
@@ -99,17 +99,19 @@
 			url //display url
 		;
 
+		//console.log("What are the results of results.length? " +results.length); //find results of results.length
+
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){ //while the length of the results is greater than i, continue loop
 
 
-			console.log("Am I at line 106?");
+			//console.log("Am I at for loop? YES"); //test to make sure gets to for loop
 
 			// title of video ends with pipe
 			// pull the title's string using index numbers
 			titleEnd = results[i].indexOf('|'); //titleEnd variable equal to the position of the first occurrence within variable results
-			title = results[i].subString(0, titleEnd); //title variable equals the characters extracted from the...
-			// results array between 0 and the length of titleEnd
+			title = results[i].substring(0, titleEnd); //title variable equals the characters extracted from the... (continued to next line)
+			// results array between 0 and the length of titleEnd //edit: error fixed; removed camelcase from subString to substring
 			
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length); //obtain url from results array
