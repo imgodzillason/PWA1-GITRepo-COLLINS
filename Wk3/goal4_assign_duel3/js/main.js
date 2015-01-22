@@ -1,8 +1,8 @@
 /**
  Jacob Collins
  PWA- Section 1
- 1/16/15
- Analyze Duel #2
+ 1/23/15
+ Analyze Duel #3
  */
 
 //self-executing function

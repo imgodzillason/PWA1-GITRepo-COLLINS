@@ -2,7 +2,7 @@
  Jacob Collins
  1/16/15
  Week 2 - Analyze Buggy Search
- *//
+ */
 
 
 
@@ -43,7 +43,7 @@
 	var search = function(query){ //set search variable to query function //edit: error fixed, added front curly brace
 		
 		// split the user's search query string into an array
-		var queryArray = query.join(" "); //set variable queryArray equal to the string of elements in the query array
+		var queryArray = query.split(" "); //set variable queryArray equal to the string of elements in the query array //edit: error fixed .join to .split
 		
 		// array to store matched results from database.js
 		var results = []; //results variable equal to empty array
@@ -54,12 +54,12 @@
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|'); //return position of occurrence in database for variable dbTitleEnd
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); //convert string to lowercase letters for variable dbitem
+			var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd); //convert string to lowercase letters for variable dbitem //edit: error fixed camelcase toLowerCase from tolowercase
 
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
 			for (var ii = 0, jj = queryArray.length; ii < jj; ii++) { //loop through query array as long as ii is less than the length of the query
-				var qitem = queryArray[ii].tolowercase(); //return query array in lowercase for variable qitem
+				var qitem = queryArray[ii].toLowerCase(); //return query array in lowercase for variable qitem //fixed camelcase toLowerCase from tolowercase
 
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
@@ -127,4 +127,4 @@
 		return false; //return false
 	}; //edit: fixed error, added end curly brace
 
-})(); //run script
+})();//run script
