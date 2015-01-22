@@ -44,21 +44,28 @@
     //fight function
     function fight(){
         console.log("in the fight function"); //test to make sure function called correctly
-        alert(playerStats1[0]+":"+playerStats1[2]+"  *START*  "+playerStats2[0]+":"+playerStats2[1]); //pop up showing name, health, and start //edit:changed variables to match arrays
+
+        //player health start
+        document.getElementById("kabal").innerHTML = players[0].health; //show Deadpool's health
+        document.getElementById("kratos").innerhtml = players[1].health; //show Wolverine's health
+
+
+
+        //alert(playerStats1[0]+":"+playerStats1[2]+"  *START*  "+playerStats2[0]+":"+playerStats2[1]); //pop up showing name, health, and start //edit:changed variables to match arrays
 
         for(var i=0; i<10; i++){    //set up number of times to go through function...start at 0 and go until it reaches 10 by adding 1 every time
           //Math.floor(Math.random() * (max - min) + min); //formula to determine damage
 
-          var minDamage1 = playerStats1[1] * .5; //minimum damage halved for player 1 edit: changed variable to array for player 1
-          var minDamage2 = playerStats2[1] * .5; //minimum damage halved for player 2 edit: changed variable to array for player 2
+          var minDamage1 = players[0].damage * .5; //minimum damage halved for player 1 edit: changed variable to array for player 1
+          var minDamage2 = players[1].damage * .5; //minimum damage halved for player 2 edit: changed variable to array for player 2
             //round down integer after multiplying random number by the max damage subtracted by min damage, after added to min damage for player 1
-          var f1 = Math.floor(Math.random() * (playerStats1[1] - minDamage1) + minDamage1); //edit:changed variable to match new array for player 1
+          var f1 = Math.floor(Math.random() * (players[0].damage - minDamage1) + minDamage1); //edit:changed variable to match new array for player 1
             //round down integer after multiplying random number by the max damage subtracted by min damage, after added to min damage for player 2
-          var f2 = Math.floor(Math.random() * (playerStats2[1] - minDamage2) + minDamage2);// edit: changed variable to match new array for player 2
+          var f2 = Math.floor(Math.random() * (players[1].damage - minDamage2) + minDamage2);// edit: changed variable to match new array for player 2
 
           //inflict damage
-          playerStats1[2] -= f1; //damage inflicted on player one
-          playerStats2[2] -= f2; //damage inflicted on player two
+          players[0].health -= f1; //damage inflicted on player one //edit: changed array to new object set for player 1
+          players[1].health -= f2; //damage inflicted on player two //edit: changed array to new object set for player 2
             //print both player's names and health to console
             console.log(playerStats1[0]+":"+playerStats1[2]+ " " +playerStats2[0]+":"+playerStats2[2]); //edit: changed output to match new array
 
@@ -67,30 +74,30 @@
 
             if (results ==="no winner"){ //if no winner, increase next round and pop up name, health, and round of both players
                 round++;
-                alert(playerStats1[0]+":"+playerStats1[2]+"  *ROUND "+round+" OVER* " +playerStats2[0]+":"+playerStats2[2]); //edit: changed output to match new array
+                alert(players[0].name+":"+players[0].health+"  *ROUND "+round+" OVER* " +players[1].name+":"+players[1].health); //edit: changed output to match new array
             }else{
                 alert(results); //pop up results
                 break; //stop code if meets requirements
             } //close out else statement
-        }; //close out for loop
-    }; //close out fight function
+        } //close out for loop
+    } //close out fight function
 
     //check for winner
     function winnerCheck(){ //check for winner
 
         var result = "no winner"; //if there isn't a winner, return no winner result
 
-        if(playerStats1[2]<1 && playerStats2[2]<1) { //if both player's health is below 1 //edit: changed variables to match new array for both players
+        if(players[0].health<1 && players[1].health<1) { //if both player's health is below 1 //edit: changed variables to match new array for both players
             result = "You both die."; //show that they both died
-        }else if(playerStats1[2] < 1){ //if player one's health is less than 1 //edit: changed variables to match new array for both players
-            result = playerStats2[0] + " WINS!!!"; //show player two wins //edit: changed variables to match new array for both players
-        }else if(playerStats2[2] < 1){ //if player two's health is less than 1 //edit: changed variables to match new array for both players
-            result = playerStats1[0] + " WINS!!!"; //show player one wins //edit: changed variables to match new array for both players
-        }; //close out else/if statement
+        }else if(players[0].health < 1){ //if player one's health is less than 1 //edit: changed variables to match new array for both players
+            result = players[1].name + " WINS!!!"; //show player two wins //edit: changed variables to match new array for both players
+        }else if(players[1].health < 1){ //if player two's health is less than 1 //edit: changed variables to match new array for both players
+            result = players[0].name + " WINS!!!"; //show player one wins //edit: changed variables to match new array for both players
+        } //close out else/if statement
 
         return result; //return the result of the function
 
-    }; //close out function winnerCheck
+    } //close out function winnerCheck
 
     //program begins
     console.log("program start");
