@@ -71,7 +71,7 @@
 		} //close initial for loop //error fixed, removed semi-colon, added end curly brace
 		
 		results.sort(); //sort elements of array
-		
+
 		// Check that matches were found, and run output functions
 		if(results.length = 0){ //if the results length is equal to 0
 			noMatch(); //run noMatch function
@@ -79,7 +79,8 @@
 			showMatches(results); //otherwise run showMatches function for variable results
 		} //close else statement //edit: error fixed, removed semi-colon, fixed end curly brace
 	}; //close if statement
-	
+
+
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){ //noMatch variable is equal to anonymous function
 		var html = ''+ //html variable is equal to query plus
@@ -88,7 +89,7 @@
 		;
 		resultsDIV.innerHTML = html; //return html content of element html
 	};
-	
+
 	// Put matches into page as paragraphs with anchors
 	var showMatches = function(results){ //showMatches variable is equal to results function
 		
@@ -97,10 +98,13 @@
 			title, //display title
 			url //display url
 		;
-		
+
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){ //while the length of the results is greater than i, continue loop
-		
+
+
+			console.log("Am I at line 106?");
+
 			// title of video ends with pipe
 			// pull the title's string using index numbers
 			titleEnd = results[i].indexOf('|'); //titleEnd variable equal to the position of the first occurrence within variable results
@@ -115,7 +119,8 @@
 		} //edit: error fixed, removed semi-colon, added end curly brace
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	}; //end function process
-	
+
+
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function() { //execute document.form when form is submitted
@@ -126,5 +131,6 @@
 		// THE LINE DIRECTLY BELOW IS CORRECT
 		return false; //return false
 	}; //edit: fixed error, added end curly brace
+
 
 })();//run script
