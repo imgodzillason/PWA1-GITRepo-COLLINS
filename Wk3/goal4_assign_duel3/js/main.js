@@ -24,8 +24,8 @@
     var button = document.querySelector(".buttonblue");
 
     //player health start
-    document.getElementById("kabal").innerHTML = players[0].health; //show Deadpool's health
-    document.getElementById("kratos").innerhtml = players[1].health; //show Wolverine's health
+    document.getElementById("kabal").innerHTML = players[0].name+ " : " + players[0].health; //show Deadpool's health
+    document.getElementById("kratos").innerHTML = players[1].name + " : " + players[1].health; //show Wolverine's health
 
     //fight function
     function fight() {
@@ -41,23 +41,24 @@
         players[0].health -= f1; //damage inflicted on player one //edit: changed array to new object set for player 1
         players[1].health -= f2; //damage inflicted on player two //edit: changed array to new object set for player 2
 
-        var results = winnerCheck(); //check for winner by calling function
+        var endResults = winnerCheck(); //check for winner by calling function
 
-        if (results === "no winner") { //if no winner, increase next round and pop up name, health, and round of both players
+        if (endResults === "no winner") { //if no winner, increase next round and pop up name, health, and round of both players
             round++;
 
-            document.getElementById("kabal").innerHTML = players[0].health; //show Deadpool's health
-            document.getElementById("kratos").innerHTML = players[1].health; //show Wolverine's health
+            document.getElementById("kabal").innerHTML = players[0].name+ " : "+ players[0].health; //show Deadpool's health
+            document.getElementById("kratos").innerHTML = players[1].name+ " : "+ players[1].health; //show Wolverine's health
             document.getElementById("round_number").innerHTML = "ROUND " + round + ": COMPLETED!";
 
         } else {
-            document.getElementById("scores").innerHTML = endResults;
-            document.getElementById("round_number").innerHTML = endResults;
+            document.getElementById("scores").innerHTML = endResults; //replace score with endResults
+            document.getElementById("round_number").innerHTML = endResults; //replace round number with endResults
+            document.getElementById("scores").style.textAlign = "center";
 
             button.innerHTML = "FINISH HIM!";
             button.setAttribute("onclick", null);
-        }; //close out else statement
-    }; //close out for loop
+        } //close out else statement
+    } //close out for loop
 
 
     //check for winner
