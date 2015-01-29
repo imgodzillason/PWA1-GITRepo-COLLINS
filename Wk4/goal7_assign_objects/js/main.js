@@ -29,7 +29,7 @@
         }
     }
 
-    //after for loop runs, increase rowNumber by 1
+    //after for loop runs, increase rowNumber by 1...rowNumber++
 
     var interval = setInterval(runUpdate, 1000/30); //sets interval to run 30 times a second
 
@@ -45,7 +45,7 @@
 
             element.update();
     })
-    
+
     }
 
 })();

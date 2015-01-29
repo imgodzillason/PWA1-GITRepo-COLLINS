@@ -14,11 +14,11 @@ function Person (names, row){ //create constructor function using names and row 
     this.name = names; //assign value stored in names parameter
     this.actions = Person.actions[Math.floor(Math.random() * Person.length.actions)]; //assign single value for action choice
     this.jobs = Person.jobs[Math.floor(Math.random() * Person.length.jobs)]; //assigns single value for jobs
-    this.row = row; //assign value to row passed in parameter
+    this.rows = row; //assign value to row passed in parameter
 
 }
 
-Person.prototype.action = function(){
+Person.prototype.actionUpdate = function(){
     //set up statement to check if number is valid
     //update action approx. every 5 seconds
     //set to correct column to change action
