@@ -22,24 +22,25 @@
 
         people.push(person); //push person name to array
         if(personName != rowOne.innerHTML && personName != rowTwo.innerHTML && personName != rowThree.innerHTML){ //set if statement to get names
-
-
-
-
+            //set names for rows and call populateHTML function twice
+        } else{
+            //decrease i variable by 1
+            //decrease rowNumber by 1
         }
+    }
 
-        function populateHTML()
+    //after for loop runs, increase rowNumber by 1
 
+    var interval = setInterval(runUpdate, 1000/30); //sets interval to run 30 times a second
 
+    function populateHTML(){
+        //create local variable
+        //point to HTML id that needs information to be replaced
+        //change innerHTML for info
+    }
 
+    function runUpdate(){
+        //loop through array and calls person.js file for updated information
+    }
 
-
-
-
-
-
-
-
-
-
-})
+})();
