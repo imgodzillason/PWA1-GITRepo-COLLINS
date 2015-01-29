@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46442c64-305e-43b7-aeb2-919c09d7ffa3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/person.js" afterPath="$PROJECT_DIR$/js/person.js" />
-    </list>
+    <list default="true" id="46442c64-305e-43b7-aeb2-919c09d7ffa3" name="Default" comment="" />
     <ignored path="goal7_assign_objects.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
