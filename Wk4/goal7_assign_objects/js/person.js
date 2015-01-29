@@ -12,7 +12,16 @@ Person.actions = ["Sleeping", "Committing Heist", "Driving", "Talking"]; //set u
 
 function Person (names, row){ //create constructor function using names and row as parameters/keys
     this.name = names; //assign value stored in names parameter
-    this.actions = person.actions[Math.floor(Math.random() * Person.length.actions)]; //assign single value for action choice
+    this.actions = Person.actions[Math.floor(Math.random() * Person.length.actions)]; //assign single value for action choice
+    this.jobs = Person.jobs[Math.floor(Math.random() * Person.length.jobs)]; //assigns single value for jobs
     this.row = row; //assign value to row passed in parameter
 
 }
+
+Person.prototype.action = function(){
+    //set up statement to check if number is valid
+    //update action approx. every 5 seconds
+    //set to correct column to change action
+    //use innerHTML to change value of column
+
+};

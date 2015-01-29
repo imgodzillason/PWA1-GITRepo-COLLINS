@@ -41,6 +41,11 @@
 
     function runUpdate(){
         //loop through array and calls person.js file for updated information
+        people.forEach(function(element){
+
+            element.update();
+    })
+    
     }
 
 })();
