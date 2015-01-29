@@ -15,7 +15,7 @@
 
     for(var i=0; i<3; i++){ //for loop initiated and continues until it reaches 3
         var nameIndex = Math.floor(Math.random() * names.length); //creates random number to choose name from array
-        
+
 
     }
 
