@@ -11,10 +11,10 @@ Person.jobs = ["Driver", "Gunner", "Runner", "Mastermind"]; //set up jobs in arr
 Person.actions = ["Sleeping", "Committing Heist", "Driving", "Talking"]; //set up actions in array
 
 function Person (names, row){ //create constructor function using names and row as parameters/keys
-    this.name = names; //assign value stored in names parameter
-    this.actions = Person.actions[Math.floor(Math.random() * Person.length.actions)]; //assign single value for action choice
-    this.jobs = Person.jobs[Math.floor(Math.random() * Person.length.jobs)]; //assigns single value for jobs
-    this.rows = row; //assign value to row passed in parameter
+    this.name = //assign value stored in names parameter
+    this.actions = //assign single value for action choice
+    this.jobs = //assign single value for jobs
+    this.rows = ;//assign value to row passed in parameter
 
 }
 
