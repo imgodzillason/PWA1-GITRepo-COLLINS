@@ -17,8 +17,8 @@
     for(var i=0; i<3; i++){ //for loop initiated and continues until it reaches 3
         var nameIndex = Math.floor(Math.random() * names.length); //creates random number to choose name from array
 
-        var person = ; //create new person and places in row
-        var personName = person.name; //creates variable personName and sets it to equal person.name
+        //create new person and places in row
+        //creates variable personName and sets it to equal person.name
 
         people.push(person); //push person name to array
         if(personName != rowOne.innerHTML && personName != rowTwo.innerHTML && personName != rowThree.innerHTML){ //set if statement to get names
